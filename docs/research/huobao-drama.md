@@ -168,7 +168,7 @@ data/      huobao.sqlite3 + static/（图片、视频、成片、海报帧）
 
 ## 许可证与商业关系
 
-- **CC BY-NC-SA 4.0**：禁止商业使用；衍生作品必须同样以 CC BY-NC-SA 4.0 发布；**与 Apache-2.0 不兼容**。本插件有赞助位与商业分发路径，因此**不能包含它的任何代码片段**，包括 `SKILL.md` 原文。
+- **CC BY-NC-SA 4.0**：禁止商业使用；衍生作品必须同样以 CC BY-NC-SA 4.0 发布；**与 Apache-2.0 不兼容**。本插件有商业分发路径，因此**不能包含它的任何代码片段**，包括 `SKILL.md` 原文。
 - 可安全借鉴的是**思路与可量化规则**：段落结构、台词时长公式、3 秒分段、三视图构图、引用标签语义。这些属于方法，重写后归我们。
 - 它是商业产品的外壳：设置页 `huobaoSiteUrl = https://api.firemux.${cn|com}` 一键写入自家网关；桌面版更新检查指向 `installer.firemux.site`；仓库里另有一个测试专门断言**注册表不得出现 chatfire / openrouter**（`official-provider-adapters.test.mjs`）——说明「去导流」是他们自己也在守的边界。不要把它的网关预设当成行业最佳实践。
 
