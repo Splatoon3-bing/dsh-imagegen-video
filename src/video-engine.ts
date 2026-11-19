@@ -1403,11 +1403,16 @@ function submitBody(
   }
 
   // Generic OpenAI-style video endpoint: best effort, widened parameters.
+  // `seconds` stays a number: Go-based gateways (wb2api) reject a JSON string here.
+  // `resolution` is the enum field those gateways read; `size` stays for the rest.
+  // `watermark: false` turns the upstream watermark off (wb2api honours it explicitly).
   const body: Record<string, unknown> = {
     model: request.upstream ?? request.model,
     prompt: request.prompt,
-    seconds: String(seconds),
+    seconds,
     size: resolution,
+    resolution,
+    watermark: false,
   }
   if (request.aspectRatio.trim() !== '') body.aspect_ratio = request.aspectRatio
   if (references.primary !== undefined) body.image = dataUrlOf(references.primary)
